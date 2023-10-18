@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(assets/front-page.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 9.3rem;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.5rem 0.7rem;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 0.1rem;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box-front-page {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box-front-page h1 {
+    font-size: 6rem;
+}
+
+.text-box-front-page p {
+    margin: 0.6rem 0rem 2.4rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.login-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 0.06rem solid #fff;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.login-btn:hover {
+    border: 0.06rem solid #fff;
+    background: #fff;
+    transition: 0.5s;
+    color: black;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* SEKCE O MNĚ */
+
+.omne-sekce {
+    width: 90%;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.omne-sekce h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.about-layout {
+    display: flex;
+    align-items: center;
+    justify-content: centers;
+    margin: 1.5rem;
+}
+
+.about-layout img {
+    max-width: 100%;
+    border-radius: 0.6rem;
+}
+
+.about-img {
+    flex-basis: 90%;
+}
+
+.about-text {
+    font-size: 1rem;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.about-text h3 {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.about-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(39, 39, 39);
+    border: 0.06rem solid rgb(39, 39, 39);
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.about-text a:hover {
+    border: 0.06rem solid rgb(39, 39, 39);
+    background: rgb(39, 39, 39);
+    transition: 0.5s;
+    color: #fff;
+}
+
+
+/* SEKCE KOLEKCE */
+
+.kolekce {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+}
+
+.kolekce h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.collections {
+    display: flex;
+}
+
+.collections-column {
+    flex: 33.33%;
+    margin: 1.2rem;
+    border-radius: 0.6rem;
+    margin-bottom: 1.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.collections-column img {
+    width: 100%;
+    display: block;
+    border-radius: 0.6rem;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.layer a {
+    width: 90%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.layer:hover a {
+    bottom: 49%;
+    opacity: 1;
+
+}
+
+footer {
+    font-size: 0.5rem;
+    max-width: 100vw;
+    height: 4rem;
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+/*  Zobrazení pro menší obrazovky*/
+
+/* Media query for screens with a maximum width of 700px */
+@media (max-width: 700px) {
+    .header {
+        background-image: no-repeat;
+    }
+
+    .nav-links {
+        text-align: center;
+        position: absolute;
+        background: rgb(39, 39, 39);
+        height: 100vh;
+        width: 12.5rem;
+        top: 0;
+        right: -12.5rem;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 0.6rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links ul {
+        padding: 1.8rem;
+    }
+
+    .text-box-front-page {
+        text-align: center;
+    }
+
+    .text-box-front-page h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-box-front-page p {
+        font-size: 1.2rem;
+    }
+
+    .login-btn {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    .about-layout {
+        flex-direction: column;
+    }
+
+    .about-layout img {
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    .about-img {
+        flex-basis: 100%;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .about-text h3 {
+        font-size: 2rem;
+    }
+
+    .about-text a {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .kolekce h2 {
+        font-size: 3rem;
+    }
+
+    .collections {
+        flex-wrap: wrap;
+    }
+
+    .collections-column {
+        flex: 50%;
+        margin: 1rem 0.5rem;
+    }
+}
